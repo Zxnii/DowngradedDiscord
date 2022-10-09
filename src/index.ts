@@ -3,6 +3,7 @@ import "./exports";
 import { app } from "electron";
 import path from "path";
 import fs from "fs";
+import * as electron from "electron";
 
 export function load(): void {
     console.log("Loading modifications.");
