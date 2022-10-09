@@ -4,8 +4,7 @@
   "description": "Discord modifications",
   "main": "build/index.js",
   "scripts": {
-    "inject": "npx tsc && node ./scripts/inject.js",
-    "inject:nobuild": "node ./scripts/inject.js"
+    "inject": "npx tsc && node ./scripts/inject.js"
   },
   "author": "zani",
   "license": "MIT",
