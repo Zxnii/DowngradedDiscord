@@ -50,8 +50,12 @@ function getAllFiles(dir, root = dir) {
     const binaryPath = path.join(discordPath,
         fs.readdirSync(discordPath).filter(file => file.startsWith("app-")).sort().pop());
 
+    console.log(`Binaries found at ${binaryPath}`);
+
     const asarPath = path.join(binaryPath, "resources");
-    const coreAsarPath = path.join(binaryPath, "modules/discord_desktop_core-1/discord_desktop_core");
+    const coreAsarPath = path.join(binaryPath, `modules/${fs.readdirSync(path.join(binaryPath, "modules")).filter(file => file.startsWith("discord_desktop_core-")).pop()}/discord_desktop_core`);
+
+    console.log(`Core asar found at ${coreAsarPath}`)
 
     const currentAsarPath = path.join(asarPath, "app.asar");
     const backupAsarPath = path.join(asarPath, "app.asar.bak");
