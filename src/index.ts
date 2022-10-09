@@ -13,7 +13,6 @@ export function load(): void {
         window.on("ready-to-show", () => {
             console.log("Main window ready to be injected into.");
 
-            window.webContents.openDevTools();
             window.webContents.executeJavaScript(fs.readFileSync(path.join(__dirname, "./renderer/bundle.js"), "utf8"), true);
         });
     });
