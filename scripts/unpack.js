@@ -69,3 +69,4 @@ console.log("Extracting core.asar");
 asar.extractAll(currentCoreAsarPath, coreUnpackDir);
 
 console.log(`Complete, Discord code is now in ${path.join(process.cwd(), "unpacked")}`);
+console.log("Please note, you'll have to run inject again as the original binaries were restored.");
