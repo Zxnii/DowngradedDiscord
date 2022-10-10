@@ -2,14 +2,47 @@
 
 This is a simple patched version of Discord, there really isn't a lot to it.
 
-### Development
+---
 
-Install all dependencies via `npm install`, make any desired changes and then patch discord via `npm run inject`
+# Installation & development
 
-For PTB and Canary you can do `npm run inject -- -ptb` and `npm run inject -- -canary` respectively.
+Install all dev dependencies via `npm install` then inject into your Discord client
 
-### Todo
+### Stable
+```ps
+npm run inject
+```
+### PTB
+```ps
+npm run inject -- -ptb
+```
+### Canary
+```ps
+npm run inject -- -canary
+```
 
-* Plugins
-* Open-source
+## Writing patches
+
+Patches are easy to write, you can first unpack Discord, take the file you wish to patch then modify it and put it in the `patches` directory
+
+### Unpacking
+
+### Stable
+```ps
+npm run unpack
+```
+### PTB
+```ps
+npm run unpack -- -ptb
+```
+### Canary
+```ps
+npm run unpack -- -canary
+```
+
+---
+
+# Todo
+
+* Plugins (there's a wip implementation, but it's far from complete)
 * Don't expose require
